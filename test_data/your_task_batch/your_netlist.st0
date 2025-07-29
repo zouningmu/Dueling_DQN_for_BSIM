@@ -1,0 +1,619 @@
+****** HSPICE -- P-2019.06-SP1-1 win64 (Sep 27 2019) ******
+Input File: your_netlist.sp
+lic:
+lic: FLEXlm: SDK_12.3
+lic: USER:   user                 HOSTNAME: DESKTOP-484LQTK
+lic: HOSTID: "bcc746e39033"       PID:      40492
+lic: Using FLEXlm license file:
+lic: 27000@DESKTOP-484LQTK
+lic: Checkout 1 hspice
+lic: License/Maintenance for hspice will expire on 30-dec-2030/2030.12
+lic: 1(in_use)/99(total) FLOATING license(s) on SERVER 27000@DESKTOP-484LQTK
+lic:
+
+ init: begin read circuit files, cpu clock= 2.10E-02
+       option search = D:/synopsys/Hspice_P-2019.06-SP1-1/parts/behave/
+       option search = D:/synopsys/Hspice_P-2019.06-SP1-1/parts/AD/
+       option search = D:/synopsys/Hspice_P-2019.06-SP1-1/parts/XILINX/
+       option search = D:/synopsys/Hspice_P-2019.06-SP1-1/parts/TLINE/
+       option search = D:/synopsys/Hspice_P-2019.06-SP1-1/parts/TI/
+       option search = D:/synopsys/Hspice_P-2019.06-SP1-1/parts/SIGNET/
+       option search = D:/synopsys/Hspice_P-2019.06-SP1-1/parts/PCI/
+       option search = D:/synopsys/Hspice_P-2019.06-SP1-1/parts/LIN_TEC
+                         H/
+       option search = D:/synopsys/Hspice_P-2019.06-SP1-1/parts/PET/
+       option search = D:/synopsys/Hspice_P-2019.06-SP1-1/parts/DI0/
+       option search = D:/synopsys/Hspice_P-2019.06-SP1-1/parts/COMLINE
+                         /
+       option search = D:/synopsys/Hspice_P-2019.06-SP1-1/parts/BURR_BR
+                         M/
+       option search = D:/synopsys/Hspice_P-2019.06-SP1-1/parts/BJT/
+       option nomod
+       option tnom =     25.0
+       option post =     2.00
+       option ingold =     2.00
+       option numdgt =     7.00
+       option probe
+       option measfile =     1.00
+       option measform =     3.00
+       option dccap =     1.00
+       option post
+ init: end read circuit files, cpu clock= 2.30E-02 peak memory=      61 mb
+ init: begin check errors, cpu clock= 2.30E-02
+ init: end check errors, cpu clock= 2.50E-02 peak memory=      61 mb
+ init: begin setup matrix, pivot=     0 cpu clock= 2.50E-02
+       establish matrix -- done, cpu clock= 2.50E-02 peak memory=      61 mb
+       re-order matrix -- done, cpu clock= 2.50E-02 peak memory=      61 mb
+ init: end setup matrix, cpu clock= 2.50E-02 peak memory=      61 mb
+ dcop: begin dcop, cpu clock= 2.50E-02
+ dcop: end dcop, cpu clock= 2.60E-02 peak memory=      61 mb tot_iter=       3
+ sweep: voltage         voltage1         begin, #sweeps =  81
+ voltage: v1              =   -2.00E+00
+ dcop: begin dcop, cpu clock= 2.60E-02
+ dcop: end dcop, cpu clock= 2.60E-02 peak memory=      61 mb tot_iter=       6
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac1    begin, #sweeps=   1 cpu clock= 2.60E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac1    end, cpu clock= 2.60E-02 peak memory=      61 mb
+ voltage: v1              =   -1.95E+00
+ dcop: begin dcop, cpu clock= 2.60E-02
+ dcop: end dcop, cpu clock= 2.60E-02 peak memory=      61 mb tot_iter=       9
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac2    begin, #sweeps=   1 cpu clock= 2.60E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac2    end, cpu clock= 2.60E-02 peak memory=      61 mb
+ voltage: v1              =   -1.90E+00
+ dcop: begin dcop, cpu clock= 2.60E-02
+ dcop: end dcop, cpu clock= 2.70E-02 peak memory=      61 mb tot_iter=      12
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac3    begin, #sweeps=   1 cpu clock= 2.70E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac3    end, cpu clock= 2.70E-02 peak memory=      61 mb
+ voltage: v1              =   -1.85E+00
+ dcop: begin dcop, cpu clock= 2.70E-02
+ dcop: end dcop, cpu clock= 2.70E-02 peak memory=      61 mb tot_iter=      15
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac4    begin, #sweeps=   1 cpu clock= 2.70E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac4    end, cpu clock= 2.70E-02 peak memory=      61 mb
+ voltage: v1              =   -1.80E+00
+ dcop: begin dcop, cpu clock= 2.70E-02
+ dcop: end dcop, cpu clock= 2.70E-02 peak memory=      61 mb tot_iter=      18
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac5    begin, #sweeps=   1 cpu clock= 2.70E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac5    end, cpu clock= 2.70E-02 peak memory=      61 mb
+ voltage: v1              =   -1.75E+00
+ dcop: begin dcop, cpu clock= 2.70E-02
+ dcop: end dcop, cpu clock= 2.70E-02 peak memory=      61 mb tot_iter=      21
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac6    begin, #sweeps=   1 cpu clock= 2.70E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac6    end, cpu clock= 2.70E-02 peak memory=      61 mb
+ voltage: v1              =   -1.70E+00
+ dcop: begin dcop, cpu clock= 2.70E-02
+ dcop: end dcop, cpu clock= 2.70E-02 peak memory=      61 mb tot_iter=      24
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac7    begin, #sweeps=   1 cpu clock= 2.70E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac7    end, cpu clock= 2.70E-02 peak memory=      61 mb
+ voltage: v1              =   -1.65E+00
+ dcop: begin dcop, cpu clock= 2.70E-02
+ dcop: end dcop, cpu clock= 2.70E-02 peak memory=      61 mb tot_iter=      27
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac8    begin, #sweeps=   1 cpu clock= 2.80E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac8    end, cpu clock= 2.80E-02 peak memory=      61 mb
+ voltage: v1              =   -1.60E+00
+ dcop: begin dcop, cpu clock= 2.80E-02
+ dcop: end dcop, cpu clock= 2.80E-02 peak memory=      61 mb tot_iter=      30
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac9    begin, #sweeps=   1 cpu clock= 2.80E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac9    end, cpu clock= 2.80E-02 peak memory=      61 mb
+ voltage: v1              =   -1.55E+00
+ dcop: begin dcop, cpu clock= 2.80E-02
+ dcop: end dcop, cpu clock= 2.80E-02 peak memory=      61 mb tot_iter=      33
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac10   begin, #sweeps=   1 cpu clock= 2.80E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac10   end, cpu clock= 2.80E-02 peak memory=      61 mb
+ voltage: v1              =   -1.50E+00
+ dcop: begin dcop, cpu clock= 2.80E-02
+ dcop: end dcop, cpu clock= 2.80E-02 peak memory=      61 mb tot_iter=      36
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac11   begin, #sweeps=   1 cpu clock= 2.80E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac11   end, cpu clock= 2.80E-02 peak memory=      61 mb
+ voltage: v1              =   -1.45E+00
+ dcop: begin dcop, cpu clock= 2.80E-02
+ dcop: end dcop, cpu clock= 2.80E-02 peak memory=      61 mb tot_iter=      39
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac12   begin, #sweeps=   1 cpu clock= 2.80E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac12   end, cpu clock= 2.80E-02 peak memory=      61 mb
+ voltage: v1              =   -1.40E+00
+ dcop: begin dcop, cpu clock= 2.80E-02
+ dcop: end dcop, cpu clock= 2.80E-02 peak memory=      61 mb tot_iter=      42
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac13   begin, #sweeps=   1 cpu clock= 2.80E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac13   end, cpu clock= 2.80E-02 peak memory=      61 mb
+ voltage: v1              =   -1.35E+00
+ dcop: begin dcop, cpu clock= 2.80E-02
+ dcop: end dcop, cpu clock= 2.90E-02 peak memory=      61 mb tot_iter=      45
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac14   begin, #sweeps=   1 cpu clock= 2.90E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac14   end, cpu clock= 2.90E-02 peak memory=      61 mb
+ voltage: v1              =   -1.30E+00
+ dcop: begin dcop, cpu clock= 2.90E-02
+ dcop: end dcop, cpu clock= 2.90E-02 peak memory=      61 mb tot_iter=      48
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac15   begin, #sweeps=   1 cpu clock= 2.90E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac15   end, cpu clock= 2.90E-02 peak memory=      61 mb
+ voltage: v1              =   -1.25E+00
+ dcop: begin dcop, cpu clock= 2.90E-02
+ dcop: end dcop, cpu clock= 2.90E-02 peak memory=      61 mb tot_iter=      51
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac16   begin, #sweeps=   1 cpu clock= 2.90E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac16   end, cpu clock= 2.90E-02 peak memory=      61 mb
+ voltage: v1              =   -1.20E+00
+ dcop: begin dcop, cpu clock= 2.90E-02
+ dcop: end dcop, cpu clock= 2.90E-02 peak memory=      61 mb tot_iter=      54
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac17   begin, #sweeps=   1 cpu clock= 2.90E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac17   end, cpu clock= 2.90E-02 peak memory=      61 mb
+ voltage: v1              =   -1.15E+00
+ dcop: begin dcop, cpu clock= 2.90E-02
+ dcop: end dcop, cpu clock= 2.90E-02 peak memory=      61 mb tot_iter=      57
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac18   begin, #sweeps=   1 cpu clock= 2.90E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac18   end, cpu clock= 2.90E-02 peak memory=      61 mb
+ voltage: v1              =   -1.10E+00
+ dcop: begin dcop, cpu clock= 3.00E-02
+ dcop: end dcop, cpu clock= 3.00E-02 peak memory=      61 mb tot_iter=      60
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac19   begin, #sweeps=   1 cpu clock= 3.00E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac19   end, cpu clock= 3.00E-02 peak memory=      61 mb
+ voltage: v1              =   -1.05E+00
+ dcop: begin dcop, cpu clock= 3.00E-02
+ dcop: end dcop, cpu clock= 3.00E-02 peak memory=      61 mb tot_iter=      63
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac20   begin, #sweeps=   1 cpu clock= 3.00E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac20   end, cpu clock= 3.00E-02 peak memory=      61 mb
+ voltage: v1              =   -1.00E+00
+ dcop: begin dcop, cpu clock= 3.00E-02
+ dcop: end dcop, cpu clock= 3.00E-02 peak memory=      61 mb tot_iter=      66
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac21   begin, #sweeps=   1 cpu clock= 3.00E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac21   end, cpu clock= 3.00E-02 peak memory=      61 mb
+ voltage: v1              =   -9.50E-01
+ dcop: begin dcop, cpu clock= 3.00E-02
+ dcop: end dcop, cpu clock= 3.00E-02 peak memory=      61 mb tot_iter=      69
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac22   begin, #sweeps=   1 cpu clock= 3.00E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac22   end, cpu clock= 3.00E-02 peak memory=      61 mb
+ voltage: v1              =   -9.00E-01
+ dcop: begin dcop, cpu clock= 3.00E-02
+ dcop: end dcop, cpu clock= 3.00E-02 peak memory=      61 mb tot_iter=      72
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac23   begin, #sweeps=   1 cpu clock= 3.00E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac23   end, cpu clock= 3.00E-02 peak memory=      61 mb
+ voltage: v1              =   -8.50E-01
+ dcop: begin dcop, cpu clock= 3.00E-02
+ dcop: end dcop, cpu clock= 3.00E-02 peak memory=      61 mb tot_iter=      75
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac24   begin, #sweeps=   1 cpu clock= 3.00E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac24   end, cpu clock= 3.00E-02 peak memory=      61 mb
+ voltage: v1              =   -8.00E-01
+ dcop: begin dcop, cpu clock= 3.00E-02
+ dcop: end dcop, cpu clock= 3.00E-02 peak memory=      61 mb tot_iter=      78
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac25   begin, #sweeps=   1 cpu clock= 3.10E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac25   end, cpu clock= 3.10E-02 peak memory=      61 mb
+ voltage: v1              =   -7.50E-01
+ dcop: begin dcop, cpu clock= 3.10E-02
+ dcop: end dcop, cpu clock= 3.10E-02 peak memory=      61 mb tot_iter=      81
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac26   begin, #sweeps=   1 cpu clock= 3.10E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac26   end, cpu clock= 3.10E-02 peak memory=      61 mb
+ voltage: v1              =   -7.00E-01
+ dcop: begin dcop, cpu clock= 3.10E-02
+ dcop: end dcop, cpu clock= 3.10E-02 peak memory=      61 mb tot_iter=      84
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac27   begin, #sweeps=   1 cpu clock= 3.10E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac27   end, cpu clock= 3.10E-02 peak memory=      61 mb
+ voltage: v1              =   -6.50E-01
+ dcop: begin dcop, cpu clock= 3.10E-02
+ dcop: end dcop, cpu clock= 3.10E-02 peak memory=      61 mb tot_iter=      87
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac28   begin, #sweeps=   1 cpu clock= 3.10E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac28   end, cpu clock= 3.10E-02 peak memory=      61 mb
+ voltage: v1              =   -6.00E-01
+ dcop: begin dcop, cpu clock= 3.10E-02
+ dcop: end dcop, cpu clock= 3.10E-02 peak memory=      61 mb tot_iter=      90
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac29   begin, #sweeps=   1 cpu clock= 3.10E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac29   end, cpu clock= 3.10E-02 peak memory=      61 mb
+ voltage: v1              =   -5.50E-01
+ dcop: begin dcop, cpu clock= 3.10E-02
+ dcop: end dcop, cpu clock= 3.10E-02 peak memory=      61 mb tot_iter=      93
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac30   begin, #sweeps=   1 cpu clock= 3.10E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac30   end, cpu clock= 3.10E-02 peak memory=      61 mb
+ voltage: v1              =   -5.00E-01
+ dcop: begin dcop, cpu clock= 3.10E-02
+ dcop: end dcop, cpu clock= 3.10E-02 peak memory=      61 mb tot_iter=      96
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac31   begin, #sweeps=   1 cpu clock= 3.10E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac31   end, cpu clock= 3.10E-02 peak memory=      61 mb
+ voltage: v1              =   -4.50E-01
+ dcop: begin dcop, cpu clock= 3.10E-02
+ dcop: end dcop, cpu clock= 3.20E-02 peak memory=      61 mb tot_iter=      99
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac32   begin, #sweeps=   1 cpu clock= 3.20E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac32   end, cpu clock= 3.20E-02 peak memory=      61 mb
+ voltage: v1              =   -4.00E-01
+ dcop: begin dcop, cpu clock= 3.20E-02
+ dcop: end dcop, cpu clock= 3.20E-02 peak memory=      61 mb tot_iter=     102
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac33   begin, #sweeps=   1 cpu clock= 3.20E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac33   end, cpu clock= 3.20E-02 peak memory=      61 mb
+ voltage: v1              =   -3.50E-01
+ dcop: begin dcop, cpu clock= 3.20E-02
+ dcop: end dcop, cpu clock= 3.20E-02 peak memory=      61 mb tot_iter=     105
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac34   begin, #sweeps=   1 cpu clock= 3.20E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac34   end, cpu clock= 3.20E-02 peak memory=      61 mb
+ voltage: v1              =   -3.00E-01
+ dcop: begin dcop, cpu clock= 3.20E-02
+ dcop: end dcop, cpu clock= 3.20E-02 peak memory=      61 mb tot_iter=     108
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac35   begin, #sweeps=   1 cpu clock= 3.20E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac35   end, cpu clock= 3.20E-02 peak memory=      61 mb
+ voltage: v1              =   -2.50E-01
+ dcop: begin dcop, cpu clock= 3.20E-02
+ dcop: end dcop, cpu clock= 3.20E-02 peak memory=      61 mb tot_iter=     111
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac36   begin, #sweeps=   1 cpu clock= 3.20E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac36   end, cpu clock= 3.20E-02 peak memory=      61 mb
+ voltage: v1              =   -2.00E-01
+ dcop: begin dcop, cpu clock= 3.20E-02
+ dcop: end dcop, cpu clock= 3.20E-02 peak memory=      61 mb tot_iter=     114
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac37   begin, #sweeps=   1 cpu clock= 3.20E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac37   end, cpu clock= 3.20E-02 peak memory=      61 mb
+ voltage: v1              =   -1.50E-01
+ dcop: begin dcop, cpu clock= 3.20E-02
+ dcop: end dcop, cpu clock= 3.30E-02 peak memory=      61 mb tot_iter=     117
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac38   begin, #sweeps=   1 cpu clock= 3.30E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac38   end, cpu clock= 3.30E-02 peak memory=      61 mb
+ voltage: v1              =   -1.00E-01
+ dcop: begin dcop, cpu clock= 3.30E-02
+ dcop: end dcop, cpu clock= 3.30E-02 peak memory=      61 mb tot_iter=     120
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac39   begin, #sweeps=   1 cpu clock= 3.30E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac39   end, cpu clock= 3.30E-02 peak memory=      61 mb
+ voltage: v1              =   -5.00E-02
+ dcop: begin dcop, cpu clock= 3.30E-02
+ dcop: end dcop, cpu clock= 3.30E-02 peak memory=      61 mb tot_iter=     123
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac40   begin, #sweeps=   1 cpu clock= 3.30E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac40   end, cpu clock= 3.30E-02 peak memory=      61 mb
+ voltage: v1              =    0.00E+00
+ dcop: begin dcop, cpu clock= 3.30E-02
+ dcop: end dcop, cpu clock= 3.30E-02 peak memory=      61 mb tot_iter=     126
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac41   begin, #sweeps=   1 cpu clock= 3.30E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac41   end, cpu clock= 3.30E-02 peak memory=      61 mb
+ voltage: v1              =    5.00E-02
+ dcop: begin dcop, cpu clock= 3.30E-02
+ dcop: end dcop, cpu clock= 3.30E-02 peak memory=      61 mb tot_iter=     129
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac42   begin, #sweeps=   1 cpu clock= 3.30E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac42   end, cpu clock= 3.30E-02 peak memory=      61 mb
+ voltage: v1              =    1.00E-01
+ dcop: begin dcop, cpu clock= 3.30E-02
+ dcop: end dcop, cpu clock= 3.30E-02 peak memory=      61 mb tot_iter=     132
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac43   begin, #sweeps=   1 cpu clock= 3.30E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac43   end, cpu clock= 3.30E-02 peak memory=      61 mb
+ voltage: v1              =    1.50E-01
+ dcop: begin dcop, cpu clock= 3.30E-02
+ dcop: end dcop, cpu clock= 3.30E-02 peak memory=      61 mb tot_iter=     135
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac44   begin, #sweeps=   1 cpu clock= 3.30E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac44   end, cpu clock= 3.30E-02 peak memory=      61 mb
+ voltage: v1              =    2.00E-01
+ dcop: begin dcop, cpu clock= 3.40E-02
+ dcop: end dcop, cpu clock= 3.40E-02 peak memory=      61 mb tot_iter=     138
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac45   begin, #sweeps=   1 cpu clock= 3.40E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac45   end, cpu clock= 3.40E-02 peak memory=      61 mb
+ voltage: v1              =    2.50E-01
+ dcop: begin dcop, cpu clock= 3.40E-02
+ dcop: end dcop, cpu clock= 3.40E-02 peak memory=      61 mb tot_iter=     141
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac46   begin, #sweeps=   1 cpu clock= 3.40E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac46   end, cpu clock= 3.40E-02 peak memory=      61 mb
+ voltage: v1              =    3.00E-01
+ dcop: begin dcop, cpu clock= 3.40E-02
+ dcop: end dcop, cpu clock= 3.40E-02 peak memory=      61 mb tot_iter=     144
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac47   begin, #sweeps=   1 cpu clock= 3.40E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac47   end, cpu clock= 3.40E-02 peak memory=      61 mb
+ voltage: v1              =    3.50E-01
+ dcop: begin dcop, cpu clock= 3.40E-02
+ dcop: end dcop, cpu clock= 3.40E-02 peak memory=      61 mb tot_iter=     147
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac48   begin, #sweeps=   1 cpu clock= 3.40E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac48   end, cpu clock= 3.40E-02 peak memory=      61 mb
+ voltage: v1              =    4.00E-01
+ dcop: begin dcop, cpu clock= 3.40E-02
+ dcop: end dcop, cpu clock= 3.40E-02 peak memory=      61 mb tot_iter=     150
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac49   begin, #sweeps=   1 cpu clock= 3.40E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac49   end, cpu clock= 3.40E-02 peak memory=      61 mb
+ voltage: v1              =    4.50E-01
+ dcop: begin dcop, cpu clock= 3.40E-02
+ dcop: end dcop, cpu clock= 3.40E-02 peak memory=      61 mb tot_iter=     153
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac50   begin, #sweeps=   1 cpu clock= 3.40E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac50   end, cpu clock= 3.40E-02 peak memory=      61 mb
+ voltage: v1              =    5.00E-01
+ dcop: begin dcop, cpu clock= 3.40E-02
+ dcop: end dcop, cpu clock= 3.40E-02 peak memory=      61 mb tot_iter=     156
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac51   begin, #sweeps=   1 cpu clock= 3.50E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac51   end, cpu clock= 3.50E-02 peak memory=      61 mb
+ voltage: v1              =    5.50E-01
+ dcop: begin dcop, cpu clock= 3.50E-02
+ dcop: end dcop, cpu clock= 3.50E-02 peak memory=      61 mb tot_iter=     159
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac52   begin, #sweeps=   1 cpu clock= 3.50E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac52   end, cpu clock= 3.50E-02 peak memory=      61 mb
+ voltage: v1              =    6.00E-01
+ dcop: begin dcop, cpu clock= 3.50E-02
+ dcop: end dcop, cpu clock= 3.50E-02 peak memory=      61 mb tot_iter=     162
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac53   begin, #sweeps=   1 cpu clock= 3.50E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac53   end, cpu clock= 3.50E-02 peak memory=      61 mb
+ voltage: v1              =    6.50E-01
+ dcop: begin dcop, cpu clock= 3.50E-02
+ dcop: end dcop, cpu clock= 3.50E-02 peak memory=      61 mb tot_iter=     165
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac54   begin, #sweeps=   1 cpu clock= 3.50E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac54   end, cpu clock= 3.50E-02 peak memory=      61 mb
+ voltage: v1              =    7.00E-01
+ dcop: begin dcop, cpu clock= 3.50E-02
+ dcop: end dcop, cpu clock= 3.50E-02 peak memory=      61 mb tot_iter=     168
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac55   begin, #sweeps=   1 cpu clock= 3.50E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac55   end, cpu clock= 3.50E-02 peak memory=      61 mb
+ voltage: v1              =    7.50E-01
+ dcop: begin dcop, cpu clock= 3.50E-02
+ dcop: end dcop, cpu clock= 3.50E-02 peak memory=      61 mb tot_iter=     171
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac56   begin, #sweeps=   1 cpu clock= 3.50E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac56   end, cpu clock= 3.50E-02 peak memory=      61 mb
+ voltage: v1              =    8.00E-01
+ dcop: begin dcop, cpu clock= 3.50E-02
+ dcop: end dcop, cpu clock= 3.50E-02 peak memory=      61 mb tot_iter=     174
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac57   begin, #sweeps=   1 cpu clock= 3.50E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac57   end, cpu clock= 3.50E-02 peak memory=      61 mb
+ voltage: v1              =    8.50E-01
+ dcop: begin dcop, cpu clock= 3.50E-02
+ dcop: end dcop, cpu clock= 3.60E-02 peak memory=      61 mb tot_iter=     177
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac58   begin, #sweeps=   1 cpu clock= 3.60E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac58   end, cpu clock= 3.60E-02 peak memory=      61 mb
+ voltage: v1              =    9.00E-01
+ dcop: begin dcop, cpu clock= 3.60E-02
+ dcop: end dcop, cpu clock= 3.60E-02 peak memory=      61 mb tot_iter=     180
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac59   begin, #sweeps=   1 cpu clock= 3.60E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac59   end, cpu clock= 3.60E-02 peak memory=      61 mb
+ voltage: v1              =    9.50E-01
+ dcop: begin dcop, cpu clock= 3.60E-02
+ dcop: end dcop, cpu clock= 3.60E-02 peak memory=      61 mb tot_iter=     183
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac60   begin, #sweeps=   1 cpu clock= 3.60E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac60   end, cpu clock= 3.60E-02 peak memory=      61 mb
+ voltage: v1              =    1.00E+00
+ dcop: begin dcop, cpu clock= 3.60E-02
+ dcop: end dcop, cpu clock= 3.60E-02 peak memory=      61 mb tot_iter=     186
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac61   begin, #sweeps=   1 cpu clock= 3.60E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac61   end, cpu clock= 3.60E-02 peak memory=      61 mb
+ voltage: v1              =    1.05E+00
+ dcop: begin dcop, cpu clock= 3.60E-02
+ dcop: end dcop, cpu clock= 3.60E-02 peak memory=      61 mb tot_iter=     189
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac62   begin, #sweeps=   1 cpu clock= 3.60E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac62   end, cpu clock= 3.60E-02 peak memory=      61 mb
+ voltage: v1              =    1.10E+00
+ dcop: begin dcop, cpu clock= 3.60E-02
+ dcop: end dcop, cpu clock= 3.60E-02 peak memory=      61 mb tot_iter=     192
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac63   begin, #sweeps=   1 cpu clock= 3.60E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac63   end, cpu clock= 3.60E-02 peak memory=      61 mb
+ voltage: v1              =    1.15E+00
+ dcop: begin dcop, cpu clock= 3.60E-02
+ dcop: end dcop, cpu clock= 3.60E-02 peak memory=      61 mb tot_iter=     195
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac64   begin, #sweeps=   1 cpu clock= 3.60E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac64   end, cpu clock= 3.60E-02 peak memory=      61 mb
+ voltage: v1              =    1.20E+00
+ dcop: begin dcop, cpu clock= 3.70E-02
+ dcop: end dcop, cpu clock= 3.70E-02 peak memory=      61 mb tot_iter=     198
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac65   begin, #sweeps=   1 cpu clock= 3.70E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac65   end, cpu clock= 3.70E-02 peak memory=      61 mb
+ voltage: v1              =    1.25E+00
+ dcop: begin dcop, cpu clock= 3.70E-02
+ dcop: end dcop, cpu clock= 3.70E-02 peak memory=      61 mb tot_iter=     201
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac66   begin, #sweeps=   1 cpu clock= 3.70E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac66   end, cpu clock= 3.70E-02 peak memory=      61 mb
+ voltage: v1              =    1.30E+00
+ dcop: begin dcop, cpu clock= 3.70E-02
+ dcop: end dcop, cpu clock= 3.70E-02 peak memory=      61 mb tot_iter=     204
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac67   begin, #sweeps=   1 cpu clock= 3.70E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac67   end, cpu clock= 3.70E-02 peak memory=      61 mb
+ voltage: v1              =    1.35E+00
+ dcop: begin dcop, cpu clock= 3.70E-02
+ dcop: end dcop, cpu clock= 3.70E-02 peak memory=      61 mb tot_iter=     207
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac68   begin, #sweeps=   1 cpu clock= 3.70E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac68   end, cpu clock= 3.70E-02 peak memory=      61 mb
+ voltage: v1              =    1.40E+00
+ dcop: begin dcop, cpu clock= 3.70E-02
+ dcop: end dcop, cpu clock= 3.70E-02 peak memory=      61 mb tot_iter=     210
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac69   begin, #sweeps=   1 cpu clock= 3.70E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac69   end, cpu clock= 3.70E-02 peak memory=      61 mb
+ voltage: v1              =    1.45E+00
+ dcop: begin dcop, cpu clock= 3.70E-02
+ dcop: end dcop, cpu clock= 3.70E-02 peak memory=      61 mb tot_iter=     213
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac70   begin, #sweeps=   1 cpu clock= 3.70E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac70   end, cpu clock= 3.70E-02 peak memory=      61 mb
+ voltage: v1              =    1.50E+00
+ dcop: begin dcop, cpu clock= 3.70E-02
+ dcop: end dcop, cpu clock= 3.70E-02 peak memory=      61 mb tot_iter=     216
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac71   begin, #sweeps=   1 cpu clock= 3.80E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac71   end, cpu clock= 3.80E-02 peak memory=      61 mb
+ voltage: v1              =    1.55E+00
+ dcop: begin dcop, cpu clock= 3.80E-02
+ dcop: end dcop, cpu clock= 3.80E-02 peak memory=      61 mb tot_iter=     219
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac72   begin, #sweeps=   1 cpu clock= 3.80E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac72   end, cpu clock= 3.80E-02 peak memory=      61 mb
+ voltage: v1              =    1.60E+00
+ dcop: begin dcop, cpu clock= 3.80E-02
+ dcop: end dcop, cpu clock= 3.80E-02 peak memory=      61 mb tot_iter=     222
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac73   begin, #sweeps=   1 cpu clock= 3.80E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac73   end, cpu clock= 3.80E-02 peak memory=      61 mb
+ voltage: v1              =    1.65E+00
+ dcop: begin dcop, cpu clock= 3.80E-02
+ dcop: end dcop, cpu clock= 3.80E-02 peak memory=      61 mb tot_iter=     225
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac74   begin, #sweeps=   1 cpu clock= 3.80E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac74   end, cpu clock= 3.80E-02 peak memory=      61 mb
+ voltage: v1              =    1.70E+00
+ dcop: begin dcop, cpu clock= 3.80E-02
+ dcop: end dcop, cpu clock= 3.80E-02 peak memory=      61 mb tot_iter=     228
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac75   begin, #sweeps=   1 cpu clock= 3.80E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac75   end, cpu clock= 3.80E-02 peak memory=      61 mb
+ voltage: v1              =    1.75E+00
+ dcop: begin dcop, cpu clock= 3.80E-02
+ dcop: end dcop, cpu clock= 3.80E-02 peak memory=      61 mb tot_iter=     231
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac76   begin, #sweeps=   1 cpu clock= 3.80E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac76   end, cpu clock= 3.80E-02 peak memory=      61 mb
+ voltage: v1              =    1.80E+00
+ dcop: begin dcop, cpu clock= 3.80E-02
+ dcop: end dcop, cpu clock= 3.80E-02 peak memory=      61 mb tot_iter=     234
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac77   begin, #sweeps=   1 cpu clock= 3.80E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac77   end, cpu clock= 3.80E-02 peak memory=      61 mb
+ voltage: v1              =    1.85E+00
+ dcop: begin dcop, cpu clock= 3.80E-02
+ dcop: end dcop, cpu clock= 3.90E-02 peak memory=      61 mb tot_iter=     237
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac78   begin, #sweeps=   1 cpu clock= 3.90E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac78   end, cpu clock= 3.90E-02 peak memory=      61 mb
+ voltage: v1              =    1.90E+00
+ dcop: begin dcop, cpu clock= 3.90E-02
+ dcop: end dcop, cpu clock= 3.90E-02 peak memory=      61 mb tot_iter=     240
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac79   begin, #sweeps=   1 cpu clock= 3.90E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac79   end, cpu clock= 3.90E-02 peak memory=      61 mb
+ voltage: v1              =    1.95E+00
+ dcop: begin dcop, cpu clock= 3.90E-02
+ dcop: end dcop, cpu clock= 3.90E-02 peak memory=      61 mb tot_iter=     243
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac80   begin, #sweeps=   1 cpu clock= 3.90E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac80   end, cpu clock= 3.90E-02 peak memory=      61 mb
+ voltage: v1              =    2.00E+00
+ dcop: begin dcop, cpu clock= 3.90E-02
+ dcop: end dcop, cpu clock= 3.90E-02 peak memory=      61 mb tot_iter=     246
+ output: D:\BSIM\test_data\your_task_batch\your_netlist.ma0
+ sweep: ac ac81   begin, #sweeps=   1 cpu clock= 3.90E-02
+ ac: frequency=1.00e+05
+ sweep: ac ac81   end, cpu clock= 3.90E-02 peak memory=      61 mb
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s)

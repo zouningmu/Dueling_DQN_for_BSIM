@@ -1,0 +1,5482 @@
+ ****** HSPICE -- P-2019.06-SP1-1 win64 (Sep 27 2019) ******                    
+  Copyright (c) 1986 - 2025 by Synopsys, Inc. All Rights Reserved.              
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: your_netlist.sp                                                   
+  Command line options: D:\synopsys\Hspice_P-2019.06-SP1-1\WIN64\hspice.com -i your_netlist.sp -o D:\BSIM\test_data\your_task_batch\your_netlist.lis
+  Start time: Sat Jul 26 00:25:23 2025
+  lic:  
+  lic: FLEXlm: SDK_12.3 
+  lic: USER:   user                 HOSTNAME: DESKTOP-484LQTK 
+  lic: HOSTID: "bcc746e39033"       PID:      40492 
+  lic: Using FLEXlm license file: 
+  lic: 27000@DESKTOP-484LQTK 
+  lic: Checkout 1 hspice 
+  lic: License/Maintenance for hspice will expire on 30-dec-2030/2030.12 
+  lic: 1(in_use)/99(total) FLOATING license(s) on SERVER 27000@DESKTOP-484LQTK 
+  lic:   
+  **warning** (your_model.l:7) Model nmos_main device geometries will not be checked against the limits set by lmin, lmax, wmin and wmax. To enable this check, add a period(.) to the model name(i.e. enable model selector).
+  **warning** (your_netlist.sp:19) The equation in .MEASURE cannot be a function of node voltages or branch currents. Unexpected results may incur.
+  **warning** option measfile is disabled due to no .alter in the netlist
+  **warning** (nmos_main:m1 (your_netlist.sp:6)) Warning: No WPE calculated, parameters SCA, SCB, SCC, SC not specified and/or SC not positive. 
+  
+      
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000000  
+ **info** dc convergence successful at Newton-Raphson method 
+ **Warning**(nmos_main : m1): Vgs =      2.00     has exceeded Vgs_max =      1.98    
+ **Warning**(nmos_main : m1): Vgd =      2.00     has exceeded Vgd_max =      1.98    
+1****** HSPICE -- P-2019.06-SP1-1 win64 (Sep 27 2019) ******                    
+ ******  
+ 
+
+ ****** operating point information tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+    node    =voltage         node    =voltage
+
+ +0:1       = 2.000000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    2.000000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      2.000000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    1.313190e+00
+  vod      1.460467e+00
+  beta     2.054996e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.843993e-11
+  cgtot    2.489090e-11
+  cstot    2.518416e-11
+  cbtot    5.971359e-12
+  cgs      1.192043e-11
+  cgd      1.357253e-11
+
+
+
+ **info** dc convergence successful at Newton-Raphson method 
+ **Warning**(nmos_main : m1): Vgs =     -2.00     has exceeded Vgs_max =      1.98    
+ **Warning**(nmos_main : m1): Vgd =     -2.00     has exceeded Vgd_max =      1.98    
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -2.000E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-2.000000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -2.000000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -2.000000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -2.539532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.643275e-13
+  cgtot    2.655862e-11
+  cstot    2.562819e-13
+  cbtot    2.673806e-11
+  cgs      8.321794e-14
+  cgd      5.265341e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -2.000000e+00       ***
+  
+ cgg=-2.6559e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -1.950E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-1.950000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -1.950000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -1.950000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -2.489532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.643474e-13
+  cgtot    2.647967e-11
+  cstot    2.563019e-13
+  cbtot    2.665916e-11
+  cgs      8.314660e-14
+  cgd      5.267335e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -1.950000e+00       ***
+  
+ cgg=-2.6480e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -1.900E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-1.900000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -1.900000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -1.900000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -2.439532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.643678e-13
+  cgtot    2.639922e-11
+  cstot    2.563223e-13
+  cbtot    2.657876e-11
+  cgs      8.307402e-14
+  cgd      5.269376e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -1.900000e+00       ***
+  
+ cgg=-2.6399e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -1.850E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-1.850000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -1.850000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -1.850000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -2.389532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.643887e-13
+  cgtot    2.631726e-11
+  cstot    2.563432e-13
+  cbtot    2.649685e-11
+  cgs      8.300018e-14
+  cgd      5.271467e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -1.850000e+00       ***
+  
+ cgg=-2.6317e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -1.800E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-1.800000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -1.800000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -1.800000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -2.339532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.644101e-13
+  cgtot    2.623377e-11
+  cstot    2.563646e-13
+  cbtot    2.641341e-11
+  cgs      8.292509e-14
+  cgd      5.273609e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -1.800000e+00       ***
+  
+ cgg=-2.6234e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -1.750E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-1.750000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -1.750000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -1.750000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -2.289532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.644321e-13
+  cgtot    2.614874e-11
+  cstot    2.563866e-13
+  cbtot    2.632844e-11
+  cgs      8.284876e-14
+  cgd      5.275806e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -1.750000e+00       ***
+  
+ cgg=-2.6149e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -1.700E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-1.700000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -1.700000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -1.700000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -2.239532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.644546e-13
+  cgtot    2.606217e-11
+  cstot    2.564091e-13
+  cbtot    2.624192e-11
+  cgs      8.277120e-14
+  cgd      5.278058e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -1.700000e+00       ***
+  
+ cgg=-2.6062e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -1.650E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-1.650000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -1.650000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -1.650000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -2.189532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.644777e-13
+  cgtot    2.597403e-11
+  cstot    2.564322e-13
+  cbtot    2.615384e-11
+  cgs      8.269243e-14
+  cgd      5.280370e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -1.650000e+00       ***
+  
+ cgg=-2.5974e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -1.600E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-1.600000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -1.600000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -1.600000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -2.139532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.645015e-13
+  cgtot    2.587923e-11
+  cstot    2.564559e-13
+  cbtot    2.605910e-11
+  cgs      8.260657e-14
+  cgd      5.282742e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -1.600000e+00       ***
+  
+ cgg=-2.5879e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -1.550E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-1.550000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -1.550000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -1.550000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -2.089532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.645258e-13
+  cgtot    2.577705e-11
+  cstot    2.564803e-13
+  cbtot    2.595699e-11
+  cgs      8.251281e-14
+  cgd      5.285178e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -1.550000e+00       ***
+  
+ cgg=-2.5777e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -1.500E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-1.500000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -1.500000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -1.500000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -2.039532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.645509e-13
+  cgtot    2.566934e-11
+  cstot    2.565053e-13
+  cbtot    2.584935e-11
+  cgs      8.241333e-14
+  cgd      5.287681e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -1.500000e+00       ***
+  
+ cgg=-2.5669e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -1.450E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-1.450000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -1.450000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -1.450000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -1.989532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.645766e-13
+  cgtot    2.555457e-11
+  cstot    2.565311e-13
+  cbtot    2.573466e-11
+  cgs      8.230639e-14
+  cgd      5.290254e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -1.450000e+00       ***
+  
+ cgg=-2.5555e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -1.400E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-1.400000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -1.400000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -1.400000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -1.939532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.646030e-13
+  cgtot    2.543052e-11
+  cstot    2.565575e-13
+  cbtot    2.561070e-11
+  cgs      8.218947e-14
+  cgd      5.292900e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -1.400000e+00       ***
+  
+ cgg=-2.5431e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -1.350E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-1.350000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -1.350000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -1.350000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -1.889532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.646303e-13
+  cgtot    2.529392e-11
+  cstot    2.565847e-13
+  cbtot    2.547421e-11
+  cgs      8.205880e-14
+  cgd      5.295623e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -1.350000e+00       ***
+  
+ cgg=-2.5294e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -1.300E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-1.300000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -1.300000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -1.300000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -1.839532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.646583e-13
+  cgtot    2.513989e-11
+  cstot    2.566128e-13
+  cbtot    2.532029e-11
+  cgs      8.190879e-14
+  cgd      5.298426e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -1.300000e+00       ***
+  
+ cgg=-2.5140e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -1.250E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-1.250000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -1.250000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -1.250000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -1.789532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.646872e-13
+  cgtot    2.496102e-11
+  cstot    2.566417e-13
+  cbtot    2.514158e-11
+  cgs      8.173094e-14
+  cgd      5.301314e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -1.250000e+00       ***
+  
+ cgg=-2.4961e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -1.200E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-1.200000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -1.200000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -1.200000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -1.739532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.647169e-13
+  cgtot    2.474599e-11
+  cstot    2.566714e-13
+  cbtot    2.492674e-11
+  cgs      8.151218e-14
+  cgd      5.304290e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -1.200000e+00       ***
+  
+ cgg=-2.4746e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -1.150E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-1.150000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -1.150000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -1.150000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -1.689532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.647476e-13
+  cgtot    2.447732e-11
+  cstot    2.567021e-13
+  cbtot    2.465832e-11
+  cgs      8.123239e-14
+  cgd      5.307360e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -1.150000e+00       ***
+  
+ cgg=-2.4477e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -1.100E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-1.100000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -1.100000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -1.100000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -1.639532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.647793e-13
+  cgtot    2.412825e-11
+  cstot    2.567338e-13
+  cbtot    2.430959e-11
+  cgs      8.086067e-14
+  cgd      5.310528e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -1.100000e+00       ***
+  
+ cgg=-2.4128e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -1.050E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-1.050000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -1.050000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -1.050000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -1.589532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.648120e-13
+  cgtot    2.365884e-11
+  cstot    2.567665e-13
+  cbtot    2.384066e-11
+  cgs      8.035094e-14
+  cgd      5.313799e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -1.050000e+00       ***
+  
+ cgg=-2.3659e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -1.000E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-1.000000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -1.000000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -1.000000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -1.539532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.648458e-13
+  cgtot    2.301344e-11
+  cstot    2.568003e-13
+  cbtot    2.319593e-11
+  cgs      7.963895e-14
+  cgd      5.317179e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -1.000000e+00       ***
+  
+ cgg=-2.3013e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -9.500E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-9.500000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -9.500000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -9.500000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -1.489532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.648808e-13
+  cgtot    2.212527e-11
+  cstot    2.568353e-13
+  cbtot    2.230872e-11
+  cgs      7.864761e-14
+  cgd      5.320675e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -9.500000e-01       ***
+  
+ cgg=-2.2125e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -9.000E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-9.000000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -9.000000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -9.000000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -1.439532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.649170e-13
+  cgtot    2.093872e-11
+  cstot    2.568714e-13
+  cbtot    2.112347e-11
+  cgs      7.731273e-14
+  cgd      5.324292e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -9.000000e-01       ***
+  
+ cgg=-2.0939e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -8.500E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-8.500000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -8.500000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -8.500000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -1.389532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.649545e-13
+  cgtot    1.945302e-11
+  cstot    2.569089e-13
+  cbtot    1.963941e-11
+  cgs      7.563348e-14
+  cgd      5.328040e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -8.500000e-01       ***
+  
+ cgg=-1.9453e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -8.000E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-8.000000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -8.000000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -8.000000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -1.339532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.649935e-13
+  cgtot    1.775932e-11
+  cstot    2.569478e-13
+  cbtot    1.794759e-11
+  cgs      7.371522e-14
+  cgd      5.331926e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -8.000000e-01       ***
+  
+ cgg=-1.7759e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -7.500E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-7.500000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -7.500000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -7.500000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -1.289532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.650340e-13
+  cgtot    1.601935e-11
+  cstot    2.569882e-13
+  cbtot    1.620955e-11
+  cgs      7.174491e-14
+  cgd      5.335965e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -7.500000e-01       ***
+  
+ cgg=-1.6019e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -7.000E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-7.000000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -7.000000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -7.000000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -1.239532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.650765e-13
+  cgtot    1.438871e-11
+  cstot    2.570304e-13
+  cbtot    1.458071e-11
+  cgs      6.990238e-14
+  cgd      5.340174e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -7.000000e-01       ***
+  
+ cgg=-1.4389e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -6.500E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-6.500000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -6.500000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -6.500000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -1.189532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.651215e-13
+  cgtot    1.295753e-11
+  cstot    2.570748e-13
+  cbtot    1.315110e-11
+  cgs      6.829181e-14
+  cgd      5.344585e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -6.500000e-01       ***
+  
+ cgg=-1.2958e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -6.000E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-6.000000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -6.000000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -6.000000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -1.139532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.651701e-13
+  cgtot    1.174815e-11
+  cstot    2.571220e-13
+  cbtot    1.194303e-11
+  cgs      6.693898e-14
+  cgd      5.349257e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -6.000000e-01       ***
+  
+ cgg=-1.1748e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -5.500E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-5.500000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -5.500000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -5.500000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -1.089532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.652248e-13
+  cgtot    1.074287e-11
+  cstot    2.571736e-13
+  cbtot    1.093881e-11
+  cgs      6.582335e-14
+  cgd      5.354310e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -5.500000e-01       ***
+  
+ cgg=-1.0743e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -5.000E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-5.000000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -5.000000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -5.000000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -1.039532e+00
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.652909e-13
+  cgtot    9.909475e-12
+  cstot    2.572328e-13
+  cbtot    1.010627e-11
+  cgs      6.490737e-14
+  cgd      5.359999e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -5.000000e-01       ***
+  
+ cgg=-9.9095e-12
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -4.500E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-4.500000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -4.500000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -4.500000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -9.895329e-01
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.653795e-13
+  cgtot    9.215065e-12
+  cstot    2.573065e-13
+  cbtot    9.412556e-12
+  cgs      6.415230e-14
+  cgd      5.366865e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -4.500000e-01       ***
+  
+ cgg=-9.2151e-12
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -4.000E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-4.000000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -4.000000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -4.000000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -9.395329e-01
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.655156e-13
+  cgtot    8.631325e-12
+  cstot    2.574096e-13
+  cbtot    8.829364e-12
+  cgs      6.352381e-14
+  cgd      5.376092e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -4.000000e-01       ***
+  
+ cgg=-8.6313e-12
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -3.500E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-3.500000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -3.500000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -3.500000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -8.895329e-01
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.657531e-13
+  cgtot    8.135533e-12
+  cstot    2.575749e-13
+  cbtot    8.333985e-12
+  cgs      6.299219e-14
+  cgd      5.390257e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -3.500000e-01       ***
+  
+ cgg=-8.1355e-12
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -3.000E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-3.000000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -3.000000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -3.000000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -8.395329e-01
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.662102e-13
+  cgtot    7.710002e-12
+  cstot    2.578735e-13
+  cbtot    7.908720e-12
+  cgs      6.252968e-14
+  cgd      5.414995e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -3.000000e-01       ***
+  
+ cgg=-7.7100e-12
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -2.500E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-2.500000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -2.500000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -2.500000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -7.895329e-01
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.671449e-13
+  cgtot    7.341134e-12
+  cstot    2.584606e-13
+  cbtot    7.539911e-12
+  cgs      6.210477e-14
+  cgd      5.462615e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -2.500000e-01       ***
+  
+ cgg=-7.3411e-12
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -2.000E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-2.000000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -2.000000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -2.000000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -7.395329e-01
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.691191e-13
+  cgtot    7.018551e-12
+  cstot    2.596727e-13
+  cbtot    7.217024e-12
+  cgs      6.167050e-14
+  cgd      5.559934e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -2.000000e-01       ***
+  
+ cgg=-7.0186e-12
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -1.500E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-1.500000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -1.500000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -1.500000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837380e-02
+  vod     -6.895329e-01
+  beta     2.591123e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.733489e-13
+  cgtot    6.734446e-12
+  cstot    2.622335e-13
+  cbtot    6.931903e-12
+  cgs      6.113601e-14
+  cgd      5.765017e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -1.500000e-01       ***
+  
+ cgg=-6.7344e-12
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -1.000E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-1.000000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -1.000000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -1.000000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837381e-02
+  vod     -6.395329e-01
+  beta     2.591124e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.824302e-13
+  cgtot    6.483215e-12
+  cstot    2.676698e-13
+  cbtot    6.678208e-12
+  cgs      6.028585e-14
+  cgd      6.201867e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -1.000000e-01       ***
+  
+ cgg=-6.4832e-12
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =   -5.000E-02 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       =-5.000000e-02 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts   -5.000000e-02  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs     -5.000000e-02
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837381e-02
+  vod     -5.895329e-01
+  beta     2.591124e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.017493e-13
+  cgtot    6.261369e-12
+  cstot    2.790784e-13
+  cbtot    6.451021e-12
+  cgs      5.852645e-14
+  cgd      7.127891e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =  -5.000000e-02       ***
+  
+ cgg=-6.2614e-12
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    0.000E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 0.000000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    0.000000e+00  0.000000e+00
+  current  0.000000e+00 -1.710569e-49
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      0.000000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837382e-02
+  vod     -5.395329e-01
+  beta     2.591126e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.103359e-13
+  cgtot    6.067510e-12
+  cstot    3.338379e-13
+  cbtot    6.246608e-12
+  cgs      9.048702e-14
+  cgd      5.410117e-14
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   0.000000e+00       ***
+  
+ cgg=-6.0675e-12
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    5.000E-02 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 5.000000e-02 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    5.000000e-02  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      5.000000e-02
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837388e-02
+  vod     -4.895329e-01
+  beta     2.591129e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    3.217197e-13
+  cgtot    5.901729e-12
+  cstot    3.470364e-13
+  cbtot    6.062350e-12
+  cgs      4.207964e-14
+  cgd      1.286729e-13
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   5.000000e-02       ***
+  
+ cgg=-5.9017e-12
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    1.000E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 1.000000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    1.000000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Cutoff       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      1.000000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837419e-02
+  vod     -4.395329e-01
+  beta     2.591137e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    4.708632e-13
+  cgtot    5.763721e-12
+  cstot    4.274430e-13
+  cbtot    5.896924e-12
+  cgs      1.098258e-14
+  cgd      1.999916e-13
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   1.000000e-01       ***
+  
+ cgg=-5.7637e-12
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    1.500E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 1.500000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    1.500000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Subth        
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      1.500000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.837567e-02
+  vod     -3.895329e-01
+  beta     2.591153e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    7.308817e-13
+  cgtot    5.645006e-12
+  cstot    5.630166e-13
+  cbtot    5.750904e-12
+  cgs     -6.594179e-14
+  cgd      3.243184e-13
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   1.500000e-01       ***
+  
+ cgg=-5.6450e-12
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    2.000E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 2.000000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    2.000000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Subth        
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      2.000000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.838283e-02
+  vod     -3.395329e-01
+  beta     2.591189e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.160766e-12
+  cgtot    5.543122e-12
+  cstot    7.855160e-13
+  cbtot    5.628121e-12
+  cgs     -2.184221e-13
+  cgd      5.298587e-13
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   2.000000e-01       ***
+  
+ cgg=-5.5431e-12
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    2.500E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 2.500000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    2.500000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Subth        
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      2.500000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.841686e-02
+  vod     -2.895329e-01
+  beta     2.591266e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.865461e-12
+  cgtot    5.487793e-12
+  cstot    1.166554e-12
+  cbtot    5.537116e-12
+  cgs     -4.609870e-13
+  cgd      8.667890e-13
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   2.500000e-01       ***
+  
+ cgg=-5.4878e-12
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    3.000E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 3.000000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    3.000000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Subth        
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      3.000000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.857369e-02
+  vod     -2.395329e-01
+  beta     2.591435e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    3.084928e-12
+  cgtot    5.609624e-12
+  cstot    1.905607e-12
+  cbtot    5.493138e-12
+  cgs     -7.457968e-13
+  cgd      1.449840e-12
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   3.000000e-01       ***
+  
+ cgg=-5.6096e-12
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    3.500E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 3.500000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    3.500000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Subth        
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      3.500000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.924987e-02
+  vod     -1.895329e-01
+  beta     2.591806e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    5.369977e-12
+  cgtot    6.388451e-12
+  cstot    3.529740e-12
+  cbtot    5.515207e-12
+  cgs     -7.410698e-13
+  cgd      2.542364e-12
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   3.500000e-01       ***
+  
+ cgg=-6.3885e-12
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    4.000E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 4.000000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    4.000000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Subth        
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      4.000000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    4.176917e-02
+  vod     -1.395329e-01
+  beta     2.592605e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    9.356066e-12
+  cgtot    8.655169e-12
+  cstot    6.776769e-12
+  cbtot    5.609977e-12
+  cgs      2.745149e-13
+  cgd      4.448186e-12
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   4.000000e-01       ***
+  
+ cgg=-8.6552e-12
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    4.500E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 4.500000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    4.500000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Subth        
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      4.500000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    4.891704e-02
+  vod     -8.953295e-02
+  beta     2.594141e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.433379e-11
+  cgtot    1.240296e-11
+  cstot    1.132429e-11
+  cbtot    5.749076e-12
+  cgs      2.618721e-12
+  cgd      6.828126e-12
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   4.500000e-01       ***
+  
+ cgg=-1.2403e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    5.000E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 5.000000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    5.000000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Subth        
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      5.000000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    6.295638e-02
+  vod     -3.953295e-02
+  beta     2.596414e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    1.856070e-11
+  cgtot    1.637947e-11
+  cstot    1.567866e-11
+  cbtot    5.879421e-12
+  cgs      5.569502e-12
+  cgd      8.849085e-12
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   5.000000e-01       ***
+  
+ cgg=-1.6379e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    5.500E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 5.500000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    5.500000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      5.500000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    8.309166e-02
+  vod      1.046705e-02
+  beta     2.598860e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.142469e-11
+  cgtot    1.949920e-11
+  cstot    1.889077e-11
+  cbtot    5.967639e-12
+  cgs      8.088123e-12
+  cgd      1.021841e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   5.500000e-01       ***
+  
+ cgg=-1.9499e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    6.000E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 6.000000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    6.000000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      6.000000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    1.076513e-01
+  vod      6.046705e-02
+  beta     2.600819e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.324462e-11
+  cgtot    2.154950e-11
+  cstot    2.095467e-11
+  cbtot    6.014482e-12
+  cgs      9.773704e-12
+  cgd      1.108855e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   6.000000e-01       ***
+  
+ cgg=-2.1549e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    6.500E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 6.500000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    6.500000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      6.500000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    1.358343e-01
+  vod      1.104671e-01
+  beta     2.601780e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.442303e-11
+  cgtot    2.279691e-11
+  cstot    2.222065e-11
+  cbtot    6.034541e-12
+  cgs      1.077148e-11
+  cgd      1.165197e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   6.500000e-01       ***
+  
+ cgg=-2.2797e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    7.000E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 7.000000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    7.000000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      7.000000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    1.671405e-01
+  vod      1.604671e-01
+  beta     2.601329e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.522195e-11
+  cgtot    2.354873e-11
+  cstot    2.300690e-11
+  cbtot    6.040460e-12
+  cgs      1.133873e-11
+  cgd      1.203395e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   7.000000e-01       ***
+  
+ cgg=-2.3549e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    7.500E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 7.500000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    7.500000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      7.500000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    2.009978e-01
+  vod      2.104671e-01
+  beta     2.599154e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.579056e-11
+  cgtot    2.401552e-11
+  cstot    2.351701e-11
+  cbtot    6.039738e-12
+  cgs      1.166461e-11
+  cgd      1.230582e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   7.500000e-01       ***
+  
+ cgg=-2.4016e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    8.000E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 8.000000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    8.000000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      8.000000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    2.368243e-01
+  vod      2.604671e-01
+  beta     2.595065e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.621317e-11
+  cgtot    2.431935e-11
+  cstot    2.386663e-11
+  cbtot    6.036186e-12
+  cgs      1.185936e-11
+  cgd      1.250787e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   8.000000e-01       ***
+  
+ cgg=-2.4319e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    8.500E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 8.500000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    8.500000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      8.500000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    2.741329e-01
+  vod      3.104671e-01
+  beta     2.588976e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.653890e-11
+  cgtot    2.452722e-11
+  cstot    2.411932e-11
+  cbtot    6.031600e-12
+  cgs      1.198189e-11
+  cgd      1.266361e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   8.500000e-01       ***
+  
+ cgg=-2.4527e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    9.000E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 9.000000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    9.000000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      9.000000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.125654e-01
+  vod      3.604671e-01
+  beta     2.580875e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.679764e-11
+  cgtot    2.467571e-11
+  cstot    2.431035e-11
+  cbtot    6.026786e-12
+  cgs      1.206284e-11
+  cgd      1.278732e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   9.000000e-01       ***
+  
+ cgg=-2.4676e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    9.500E-01 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 9.500000e-01 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    9.500000e-01  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      9.500000e-01
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.518792e-01
+  vod      4.104671e-01
+  beta     2.570797e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.700834e-11
+  cgtot    2.478527e-11
+  cstot    2.445995e-11
+  cbtot    6.022088e-12
+  cgs      1.211830e-11
+  cgd      1.288806e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   9.500000e-01       ***
+  
+ cgg=-2.4785e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    1.000E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 1.000000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    1.000000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      1.000000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    3.919197e-01
+  vod      4.604671e-01
+  beta     2.558803e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.718352e-11
+  cgtot    2.486781e-11
+  cstot    2.458024e-11
+  cbtot    6.017642e-12
+  cgs      1.215691e-11
+  cgd      1.297181e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   1.000000e+00       ***
+  
+ cgg=-2.4868e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    1.050E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 1.050000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    1.050000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      1.050000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    4.325922e-01
+  vod      5.104671e-01
+  beta     2.544970e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.733172e-11
+  cgtot    2.493060e-11
+  cstot    2.467884e-11
+  cbtot    6.013489e-12
+  cgs      1.218359e-11
+  cgd      1.304267e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   1.050000e+00       ***
+  
+ cgg=-2.4931e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    1.100E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 1.100000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    1.100000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      1.100000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    4.738417e-01
+  vod      5.604671e-01
+  beta     2.529382e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.745895e-11
+  cgtot    2.497837e-11
+  cstot    2.476081e-11
+  cbtot    6.009629e-12
+  cgs      1.220127e-11
+  cgd      1.310350e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   1.100000e+00       ***
+  
+ cgg=-2.4978e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    1.150E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 1.150000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    1.150000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      1.150000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    5.156385e-01
+  vod      6.104671e-01
+  beta     2.512127e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.756959e-11
+  cgtot    2.501431e-11
+  cstot    2.482966e-11
+  cbtot    6.006048e-12
+  cgs      1.221184e-11
+  cgd      1.315640e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   1.150000e+00       ***
+  
+ cgg=-2.5014e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    1.200E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 1.200000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    1.200000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      1.200000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    5.579686e-01
+  vod      6.604671e-01
+  beta     2.493298e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.766684e-11
+  cgtot    2.504071e-11
+  cstot    2.488792e-11
+  cbtot    6.002725e-12
+  cgs      1.221662e-11
+  cgd      1.320290e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   1.200000e+00       ***
+  
+ cgg=-2.5041e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    1.250E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 1.250000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    1.250000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      1.250000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    6.008279e-01
+  vod      7.104671e-01
+  beta     2.472990e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.775315e-11
+  cgtot    2.505925e-11
+  cstot    2.493746e-11
+  cbtot    5.999639e-12
+  cgs      1.221654e-11
+  cgd      1.324416e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   1.250000e+00       ***
+  
+ cgg=-2.5059e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    1.300E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 1.300000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    1.300000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      1.300000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    6.442182e-01
+  vod      7.604671e-01
+  beta     2.451297e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.783039e-11
+  cgtot    2.507124e-11
+  cstot    2.497973e-11
+  cbtot    5.996769e-12
+  cgs      1.221233e-11
+  cgd      1.328109e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   1.300000e+00       ***
+  
+ cgg=-2.5071e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    1.350E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 1.350000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    1.350000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      1.350000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    6.881455e-01
+  vod      8.104671e-01
+  beta     2.428317e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.790003e-11
+  cgtot    2.507767e-11
+  cstot    2.501585e-11
+  cbtot    5.994096e-12
+  cgs      1.220457e-11
+  cgd      1.331439e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   1.350000e+00       ***
+  
+ cgg=-2.5078e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    1.400E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 1.400000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    1.400000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      1.400000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    7.326180e-01
+  vod      8.604671e-01
+  beta     2.404147e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.796323e-11
+  cgtot    2.507938e-11
+  cstot    2.504674e-11
+  cbtot    5.991603e-12
+  cgs      1.219372e-11
+  cgd      1.334461e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   1.400000e+00       ***
+  
+ cgg=-2.5079e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    1.450E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 1.450000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    1.450000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      1.450000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    7.776457e-01
+  vod      9.104671e-01
+  beta     2.378885e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.802093e-11
+  cgtot    2.507701e-11
+  cstot    2.507312e-11
+  cbtot    5.989274e-12
+  cgs      1.218017e-11
+  cgd      1.337219e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   1.450000e+00       ***
+  
+ cgg=-2.5077e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    1.500E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 1.500000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    1.500000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      1.500000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    8.232396e-01
+  vod      9.604671e-01
+  beta     2.352625e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.807387e-11
+  cgtot    2.507110e-11
+  cstot    2.509559e-11
+  cbtot    5.987096e-12
+  cgs      1.216424e-11
+  cgd      1.339751e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   1.500000e+00       ***
+  
+ cgg=-2.5071e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    1.550E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 1.550000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    1.550000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      1.550000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    8.694116e-01
+  vod      1.010467e+00
+  beta     2.325465e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.812269e-11
+  cgtot    2.506212e-11
+  cstot    2.511463e-11
+  cbtot    5.985056e-12
+  cgs      1.214621e-11
+  cgd      1.342085e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   1.550000e+00       ***
+  
+ cgg=-2.5062e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    1.600E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 1.600000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    1.600000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      1.600000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    9.161742e-01
+  vod      1.060467e+00
+  beta     2.297497e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.816791e-11
+  cgtot    2.505045e-11
+  cstot    2.513068e-11
+  cbtot    5.983142e-12
+  cgs      1.212632e-11
+  cgd      1.344247e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   1.600000e+00       ***
+  
+ cgg=-2.5050e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    1.650E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 1.650000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    1.650000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      1.650000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    9.635404e-01
+  vod      1.110467e+00
+  beta     2.268812e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.820994e-11
+  cgtot    2.503640e-11
+  cstot    2.514407e-11
+  cbtot    5.981345e-12
+  cgs      1.210477e-11
+  cgd      1.346256e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   1.650000e+00       ***
+  
+ cgg=-2.5036e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    1.700E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 1.700000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    1.700000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      1.700000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    1.011523e+00
+  vod      1.160467e+00
+  beta     2.239499e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.824916e-11
+  cgtot    2.502026e-11
+  cstot    2.515512e-11
+  cbtot    5.979656e-12
+  cgs      1.208176e-11
+  cgd      1.348132e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   1.700000e+00       ***
+  
+ cgg=-2.5020e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    1.750E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 1.750000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    1.750000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      1.750000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    1.060138e+00
+  vod      1.210467e+00
+  beta     2.209644e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.828588e-11
+  cgtot    2.500226e-11
+  cstot    2.516406e-11
+  cbtot    5.978065e-12
+  cgs      1.205743e-11
+  cgd      1.349887e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   1.750000e+00       ***
+  
+ cgg=-2.5002e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    1.800E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 1.800000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    1.800000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      1.800000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    1.109397e+00
+  vod      1.260467e+00
+  beta     2.179330e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.832035e-11
+  cgtot    2.498262e-11
+  cstot    2.517113e-11
+  cbtot    5.976566e-12
+  cgs      1.203192e-11
+  cgd      1.351535e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   1.800000e+00       ***
+  
+ cgg=-2.4983e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    1.850E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 1.850000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    1.850000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      1.850000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    1.159317e+00
+  vod      1.310467e+00
+  beta     2.148634e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.835281e-11
+  cgtot    2.496151e-11
+  cstot    2.517652e-11
+  cbtot    5.975152e-12
+  cgs      1.200536e-11
+  cgd      1.353087e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   1.850000e+00       ***
+  
+ cgg=-2.4962e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    1.900E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 1.900000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    1.900000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      1.900000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    1.209912e+00
+  vod      1.360467e+00
+  beta     2.117633e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.838345e-11
+  cgtot    2.493909e-11
+  cstot    2.518039e-11
+  cbtot    5.973817e-12
+  cgs      1.197786e-11
+  cgd      1.354552e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   1.900000e+00       ***
+  
+ cgg=-2.4939e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    1.950E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 1.950000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    1.950000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      1.950000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    1.261198e+00
+  vod      1.410467e+00
+  beta     2.086398e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.841244e-11
+  cgtot    2.491552e-11
+  cstot    2.518289e-11
+  cbtot    5.972554e-12
+  cgs      1.194952e-11
+  cgd      1.355938e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   1.950000e+00       ***
+  
+ cgg=-2.4916e-11
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+ **Warning**(nmos_main : m1): Vgs =      2.00     has exceeded Vgs_max =      1.98    
+ ******  
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+
+   *** source        0:v1 =    2.000E+00 ***
+
+    node    =voltage         node    =voltage
+
+ +0:1       = 2.000000e+00 0:3       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                              
+ element     0:v1          0:v3      
+  volts    2.000000e+00  0.000000e+00
+  current  0.000000e+00  0.000000e+00
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  0.000000e+00    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:m1      
+ model       0:nmos_mai
+ region   Linear       
+  id       0.000000e+00
+  ibs      3.896291e-33
+  ibd      1.313759e-33
+  vgs      2.000000e+00
+  vds      0.000000e+00
+  vbs      0.000000e+00
+  vth      5.395329e-01
+  vdsat    1.313190e+00
+  vod      1.460467e+00
+  beta     2.054996e-03
+  gam eff  4.300000e-01
+  gm       0.000000e+00
+  gds      0.000000e+00
+  gmb      0.000000e+00
+  cdtot    2.843993e-11
+  cgtot    2.489090e-11
+  cstot    2.518416e-11
+  cbtot    5.971359e-12
+  cgs      1.192043e-11
+  cgd      1.357253e-11
+
+
+
+ ******
+ 
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+  *** parameter 0:v1  =   2.000000e+00       ***
+  
+ cgg=-2.4891e-11
+ **Warning**:       1 SOA warnings are suppressed, increase .option MAXWARNS value to dump out these warnings
+
+          ***** job concluded
+ ******  
+ 
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :    24
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =       5 # elements   =       3
+  # resistors   =       0 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       2
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       1 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.01           1         246
+  ac analysis        0.00          81          81
+  readin             0.01
+  errchk             0.00
+  setup              0.00
+  output             0.00
+
+
+           peak memory used         62.34 megabytes
+           total cpu time            0.02 seconds
+           total elapsed time        0.04 seconds
+           job started at     00:25:23 07/26/2025
+           job ended   at     00:25:23 07/26/2025
+           job total runtime         0.04 seconds
+
+
+  lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.02(s)
